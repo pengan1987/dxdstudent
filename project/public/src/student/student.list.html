@@ -1,0 +1,17 @@
+<student *ngFor="let student of studentList" [student]="student" (edit)=updateStudent($event) (delete)=deleteStudent($event)></student>
+<button (click)="toggleEditor()">{{editorButtonLabel}}</button>
+<div *ngIf="isEditorOpen">
+    <label for="">First Name: </label>
+    <input type="text" [(ngModel)]="newStudent.firstName">
+
+    <label for="">Last Name: </label>
+    <input type="text" [(ngModel)]="newStudent.lastName">
+
+    <label for="">Age</label>
+    <input type="number" [(ngModel)]="newStudent.age">
+
+    <label for="">Is Enrolled? </label>
+    <input type="checkbox" [(ngModel)]="newStudent.isEnrolled">
+
+    <button (click)="createNewStudent()">create student</button>
+</div>

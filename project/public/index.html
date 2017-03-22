@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <title>WebDxD Angular 2</title>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="public/node_modules/core-js/client/shim.min.js"></script>
+        <script src="public/node_modules/zone.js/dist/zone.js"></script>
+        <script src="public/node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="public/node_modules/systemjs/dist/system.src.js"></script>
+        <script src="public/system.config.js"></script>
+        <script>
+            //systemjs
+            System.import('dist').catch(function(err){ console.error(err); });
+        </script>
+    </head>
+    <body>
+        <!-- load app here... -->
+        <student-list></student-list>
+    </body>
+</html>

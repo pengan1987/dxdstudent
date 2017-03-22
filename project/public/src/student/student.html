@@ -1,0 +1,24 @@
+<div class="container" *ngIf="isEditing == false">
+    <pre>First Name: {{student.firstName}}</pre>
+    <pre>Last Name: {{student.lastName}}</pre>
+    <pre>Age: {{student.age}}</pre>
+    <pre>Enrolled: {{student.isEnrolled}}</pre>
+    <button (click)="toggleEditing()">Edit</button>
+    <button (click)="deleteStudent()">Delete</button>
+</div>
+<div class="container" *ngIf="isEditing">
+    <label for="">First Name: </label>
+    <input type="text" [(ngModel)]="editingStudent.firstName">
+    <br>
+    <label for="">Last Name: </label>
+    <input type="text" [(ngModel)]="editingStudent.lastName">
+    <br>
+    <label for="">Age</label>
+    <input type="number" [(ngModel)]="editingStudent.age">
+    <br>
+    <label for="">Is Enrolled? </label>
+    <input type="checkbox" [(ngModel)]="editingStudent.isEnrolled">
+    <br>
+    <button (click)="updateStudent()">Save</button>
+    <button (click)="toggleEditing()">Cancel</button>
+</div>
